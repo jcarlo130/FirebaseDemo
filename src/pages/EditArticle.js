@@ -1,33 +1,44 @@
-import { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { collection, addDoc } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
+
 // styles
 import "./create.css";
 
-export default function Create() {
+export default function EditArticle() {
+  const { id } = useParams();
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [description, setDescription] = useState("");
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const fetchArticle = async () => {
+      const ref = doc(db, "articles", id);
+      const docSnap = await getDoc(ref);
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        setTitle(data.title);
+        setAuthor(data.author);
+        setDescription(data.description);
+      }
+    };
+    fetchArticle();
+  }, [id]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const article = { title, author, description };
-    const ref = collection(db, "articles");
-    await addDoc(ref, article);
-
-    // setTitle("");
-    // setAuthor("");
-    // setDescription("");
-
+    const ref = doc(db, "articles", id);
+    await updateDoc(ref, article);
     navigate("/");
   };
 
   return (
     <div className="create">
-      <h2 className="page-title">Add a New Article</h2>
+      <h2 className="page-title">Update Article</h2>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Title:</span>
@@ -58,7 +69,7 @@ export default function Create() {
           />
         </label>
 
-        <button className="btn">submit</button>
+        <button className="btn">Save Edits</button>
       </form>
     </div>
   );

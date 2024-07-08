@@ -1,0 +1,10 @@
+.articleDiv h2 {
+  display: flex;
+  font-size: 3rem;
+  margin: 0;
+}
+
+span {
+    font-weight: 600;
+    font-style: italic;
+}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
   getDocs,
   collection,
@@ -9,12 +9,14 @@ import {
 import { db } from "../firebase/config";
 import { useEffect, useState } from "react";
 import DeleteIcon from "../assets/delete.svg";
+import EditIcon from "../assets/pen.svg";
 
-// styles
+// Styles
 import "./Home.css";
 
 export default function Home() {
   const [articles, setArticles] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const ref = collection(db, "articles");
@@ -58,9 +60,17 @@ export default function Home() {
             <Link to={`/articles/${article.id}`}>Read More...</Link>
             <img
               className="icon"
+              id="deleteIcon"
               onClick={() => handleDelete(article.id)}
               src={DeleteIcon}
               alt="delete icon"
+            />
+            <img
+              className="icon"
+              id="editIcon"
+              onClick={() => navigate(`/editArticle/${article.id}`)}
+              src={EditIcon}
+              alt="edit icon"
             />
           </div>
         ))}
