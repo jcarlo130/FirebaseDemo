@@ -1,15 +1,22 @@
-import './App.css';
+import "./App.css";
 //import Modal from './components/Modal';
 //import ReminderList from './components/ReminderList';
-import { BrowserRouter, Route, NavLink, Routes,Navigate , Link} from 'react-router-dom'
+import {
+  BrowserRouter,
+  Route,
+  NavLink,
+  Routes,
+  Navigate,
+  Link,
+} from "react-router-dom";
 
-import React, {useState} from 'react';
+import React, { useState } from "react";
 
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Home from './pages/Home'
-import Article from './pages/Article'
-import FormArticle from './pages/FormArticle'
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Article from "./pages/Article";
+import FormArticle from "./pages/FormArticle";
 
 function App() {
   // const articles = [
@@ -45,14 +52,13 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About /> }/>
-          <Route path="/contact" element={<Contact /> }/>
-          <Route path="/articles/:urlId" element={<Article/> }/>
-          <Route path="/new" element={<FormArticle /> }/>
-          <Route path="/*" element={<Navigate to="/"/> }/>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/articles/:urlId" element={<Article />} />
+          <Route path="/new" element={<FormArticle />} />
+          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
-
       </BrowserRouter>
     </div>
   );

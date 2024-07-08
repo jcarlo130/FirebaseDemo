@@ -1,4 +1,4 @@
-import './Modal.css'
+import "./Modal.css";
 
 export default function Modal({ children, handleClose }) {
   return (
@@ -8,5 +8,5 @@ export default function Modal({ children, handleClose }) {
         <button onClick={handleClose}>Ok</button>
       </div>
     </div>
-  )
+  );
 }
