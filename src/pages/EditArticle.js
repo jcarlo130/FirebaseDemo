@@ -25,6 +25,7 @@ export default function EditArticle() {
         setDescription(data.description);
       }
     };
+
     fetchArticle();
   }, [id]);
 
