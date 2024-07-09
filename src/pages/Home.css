@@ -1,29 +1,76 @@
+title {
+  display: flex;
+  align-items: center;
+}
+
+title h2 {
+  padding-right: 12px;
+}
+
+title hr {
+  flex-grow: 1;
+  border: 0;
+  height: 1px;
+  background-color: black;
+}
+
 .home .card {
-    padding: 20px;
-    border: 1px solid #e4e4e4;
-    border-radius: 16px;
-    box-shadow: 4px 4px 6px rgba(0,0,0,0.05);
-    margin-bottom: 20px;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 20px;
+  padding-left: 2.5rem;
+  border: 1px solid #e4e4e4;
+  border-radius: 16px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  transition-duration: 0.3s;
+}
 
-  .icon {
-    position: relative;    
-    cursor: pointer;
-    filter: invert(60%);
-    padding-left: 10px;
-    padding-bottom: 5px;
-    float: right;
-    width: 3%;
-    height: 3%;
-  }
+.card:hover {
+  padding: 20px;
+  padding-left: 2rem;
+  border: 1px solid #aeaeae;
+  border-radius: 20px;
+  box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
 
-  #editIcon {
-    position: relative;    
-    cursor: pointer;
-    filter: invert(60%);
-    padding-left: 10px;
-    float: right;
-    width: 3%;
-    height: 3%;
-  }
+.articleTitle {
+  font-size: 2rem;
+  margin: 0;
+}
 
+.linkFull {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: rgba(0, 104, 215, 0.5);
+  transform: font-style;
+  transition-duration: 0.3s;
+}
+
+.linkFull:hover {
+  font-style: italic;
+  color: rgba(0, 104, 215, 1);
+}
+
+.icon {
+  position: relative;
+  cursor: pointer;
+  filter: invert(60%);
+  padding-left: 10px;
+  padding-bottom: 5px;
+  float: right;
+  width: 3%;
+  height: 3%;
+}
+
+#editIcon {
+  position: relative;
+  cursor: pointer;
+  filter: invert(60%);
+  padding-left: 10px;
+  float: right;
+  width: 3%;
+  height: 3%;
+}

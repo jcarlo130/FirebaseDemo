@@ -8,3 +8,7 @@ span {
     font-weight: 600;
     font-style: italic;
 }
+
+.author {
+  margin-bottom: 40px;
+}

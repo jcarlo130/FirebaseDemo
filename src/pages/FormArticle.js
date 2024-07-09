@@ -27,7 +27,10 @@ export default function Create() {
 
   return (
     <div className="create">
-      <h2 className="page-title">Add a New Article</h2>
+      <title>
+        <h2 className="page-title">Add a New Article</h2>
+        <hr />
+      </title>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Title:</span>
@@ -58,7 +61,7 @@ export default function Create() {
           />
         </label>
 
-        <button className="btn">submit</button>
+        <button className="btn">Publish</button>
       </form>
     </div>
   );

@@ -21,22 +21,16 @@ export default function Article() {
     });
   }, []);
 
-  // if (!article) {
-  //   setTimeout(() => {
-  //     navigate('/')
-  //   }, 2000)
-  // }
-
   return (
     <div className="articleDiv">
       {!article && <p>No records found!</p>}
       {article && (
         <div key={article.id}>
-          <h2>
+          <h2 className="title">
             {article.title}{" "}
           </h2>{" "}
-          <p>By <span>{article.author}</span></p>
-          <p>{article.description}</p>
+          <p className="author">By <span>{article.author}</span></p>
+          <p className="decription">{article.description}</p>
         </div>
       )}
     </div>

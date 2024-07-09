@@ -1,16 +1,56 @@
+title {
+  display: flex;
+  align-items: center;
+}
+
 .create {
   color: #555;
-  max-width: 480px;
+  max-width: 580px;
   margin: 60px auto;
 }
+
 .create label span {
   display: block;
   margin: 30px 0 10px;
 }
+
 .create p {
   margin-top: 10px;
   font-size: 0.8em;
 }
+
+input {
+  outline: none;
+  border: none;
+  margin: 1rem;
+  background-color: transparent;
+  font-size: 14px;
+  color: #575757;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #ccc inset;
+  padding: 1rem;
+  width: 100%;
+  background: #e4e4e4;
+}
+
+textarea {
+  outline: none;
+  border: none;
+  margin: 1rem;
+  background-color: transparent;
+  font-size: 14px;
+  color: #575757;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px #ccc inset;
+  padding: 1rem;
+  width: 100%;
+  background: #e4e4e4;
+}
+
 .create button {
   display: block;
   width: 100px;

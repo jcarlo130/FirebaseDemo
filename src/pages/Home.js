@@ -51,13 +51,18 @@ export default function Home() {
 
   return (
     <div className="home">
-      <h2>Articles</h2>
+      <title>
+        <h2>Articles</h2>
+        <hr />
+      </title>
       {articles &&
         articles.map((article) => (
           <div key={article.id} className="card">
-            <h3>{article.title}</h3>
+            <h3 className="articleTitle">{article.title}</h3>
             <p>Written by {article.author}</p>
-            <Link to={`/articles/${article.id}`}>Read More...</Link>
+            <Link className="linkFull" to={`/articles/${article.id}`}>
+              Read Full Article
+            </Link>
             <img
               className="icon"
               id="deleteIcon"
