@@ -49,7 +49,7 @@ function Login({ setLoggedIn }) {
           </div>
 
           <div className="form-group">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="loginBtn">
               Login
             </button>
           </div>
@@ -57,7 +57,7 @@ function Login({ setLoggedIn }) {
             New user?{" "}
             <button
               type="button"
-              className="signup-link"
+              className="signupLink"
               onClick={() => setShowRegistered(true)}
             >
               Sign up here!

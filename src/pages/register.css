@@ -1,4 +1,4 @@
-.loginBtn {
+.registerBtn {
   display: block;
   width: 100px;
   font-size: 1em;
@@ -13,11 +13,11 @@
   transition-duration: 0.2s;
 }
 
-.loginBtn:hover {
+.registerBtn:hover {
   background-color: rgba(0, 104, 215, 0.8);
 }
 
-.signupLink {
+.loginLink {
   text-decoration: underline;
   color: #0068d7cc;
   border: none;

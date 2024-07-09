@@ -4,6 +4,8 @@ import { auth, db } from "../firebase/config";
 import { setDoc, doc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom/dist";
 
+import "./register.css"
+
 function Register({ setShowRegistered }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -77,7 +79,7 @@ function Register({ setShowRegistered }) {
         </div>
 
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="registerBtn">
             Register
           </button>
         </div>
@@ -87,7 +89,7 @@ function Register({ setShowRegistered }) {
         <p>
           Already registered?{" "}
           <button
-            className="btn btn-secondary"
+            className="loginLink"
             onClick={() => setShowRegistered(false)}
           >
             Login here
