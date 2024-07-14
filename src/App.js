@@ -52,6 +52,7 @@ function App() {
                   <NavLink to="/about">About</NavLink>
                   <NavLink to="/contact">Contact</NavLink>
                   <NavLink to="/new">New Article</NavLink>
+                  <button classname='signout' onClick={handleSignOut}>Sign Out</button>
                 </div>
               </nav>
             </div>
