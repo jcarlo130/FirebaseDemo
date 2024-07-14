@@ -21,6 +21,7 @@ nav a {
   box-sizing: border-box;
   position: relative;
   margin: 1.5rem;
+  padding: 0 0.7rem;
   cursor: pointer;
   font-size: 24px;
   color: #0b0b0b;
@@ -51,4 +52,26 @@ nav a.active:hover {
   border-radius: 8px;
   text-decoration: none;
   border-bottom: none;
+}
+
+button {
+  border: none;
+  background-color: white;
+  padding: 0.7rem;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  color: #0b0b0b;
+  text-decoration: none;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+button:hover {
+  color: white;
+  border-radius: 8px;
+  background-color: rgb(253, 95, 95);
+  padding: 0.7rem;
 }
