@@ -54,7 +54,7 @@ nav a.active:hover {
   border-bottom: none;
 }
 
-button.signout {
+button {
   border: none;
   background-color: white;
   padding: 0.7rem;
@@ -69,7 +69,7 @@ button.signout {
   transition-delay: 0s;
 }
 
-button.signout:hover {
+button:hover {
   color: white;
   border-radius: 8px;
   background-color: rgb(253, 95, 95);

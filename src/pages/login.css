@@ -15,9 +15,18 @@
 
 .loginBtn:hover {
   background-color: rgba(0, 104, 215, 0.8);
+  padding: 8px 20px;
 }
 
 .signupLink {
+  text-decoration: underline;
+  color: #0068d7cc;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.signupLink:hover {
   text-decoration: underline;
   color: #0068d7cc;
   border: none;
