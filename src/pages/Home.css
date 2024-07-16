@@ -14,6 +14,10 @@ title hr {
   background-color: black;
 }
 
+.home {
+  padding-bottom: 3rem;
+}
+
 .home .card {
   margin-left: auto;
   margin-right: auto;
